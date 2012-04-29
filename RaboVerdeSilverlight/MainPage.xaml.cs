@@ -17,7 +17,8 @@ namespace RaboVerdeSilverlight
 		{
 			// Required to initialize variables
 			InitializeComponent();
-           Fondo.Begin();
+
+            Fondo.Begin();
 			
 			
 		}
