@@ -1,0 +1,254 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" mc:Ignorable="d"
+	x:Class="RaboVerdeSilverlight.MainPage"
+	Width="879" Height="650">
+	<UserControl.Resources>
+		<Style x:Key="EstiloBoton1" TargetType="Button">
+			<Setter Property="Background" Value="#FF1F3B53"/>
+			<Setter Property="Foreground" Value="#FF000000"/>
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA3AEB9" Offset="0"/>
+						<GradientStop Color="#FF8399A9" Offset="0.375"/>
+						<GradientStop Color="#FF718597" Offset="0.375"/>
+						<GradientStop Color="#FF617584" Offset="1"/>
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation"/>
+											<ColorAnimation Duration="0" To="#F2FFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+											<ColorAnimation Duration="0" To="#CCFFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+											<ColorAnimation Duration="0" To="#7FFFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<ColorAnimation Duration="0" To="#FF6DBDD1" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background"/>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundAnimation"/>
+											<ColorAnimation Duration="0" To="#D8FFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+											<ColorAnimation Duration="0" To="#C6FFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+											<ColorAnimation Duration="0" To="#8CFFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+											<ColorAnimation Duration="0" To="#3FFFFFFF" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="BackgroundGradient"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To=".55" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledVisualElement"/>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualElement"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Unfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="White" CornerRadius="3">
+								<Grid Background="{TemplateBinding Background}" Margin="1">
+									<Border x:Name="BackgroundAnimation" Background="#FF448DCA" Opacity="0"/>
+									<Rectangle x:Name="BackgroundGradient">
+										<Rectangle.Fill>
+											<LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+												<GradientStop Color="#FFFFFFFF" Offset="0"/>
+												<GradientStop Color="#F9FFFFFF" Offset="0.375"/>
+												<GradientStop Color="#E5FFFFFF" Offset="0.625"/>
+												<GradientStop Color="#C6FFFFFF" Offset="1"/>
+											</LinearGradientBrush>
+										</Rectangle.Fill>
+									</Rectangle>
+								</Grid>
+							</Border>
+							<ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							<Rectangle x:Name="DisabledVisualElement" Fill="#FFFFFFFF" IsHitTestVisible="false" Opacity="0" RadiusY="3" RadiusX="3"/>
+							<Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0" RadiusY="2" RadiusX="2" Stroke="#FF6DBDD1" StrokeThickness="1"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="Buton1" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<Grid.Resources>
+								<Storyboard x:Name="enFoco">
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+										<EasingColorKeyFrame KeyTime="0" Value="#FF44851A"/>
+										<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF243B16">
+											<EasingColorKeyFrame.EasingFunction>
+												<CubicEase EasingMode="EaseOut"/>
+											</EasingColorKeyFrame.EasingFunction>
+										</EasingColorKeyFrame>
+									</ColorAnimationUsingKeyFrames>
+								</Storyboard>
+								<Storyboard x:Name="sinFoco">
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+										<SplineColorKeyFrame KeyTime="0" Value="#FF243B16"/>
+										<SplineColorKeyFrame KeyTime="0:0:1" Value="#FF44851A"/>
+									</ColorAnimationUsingKeyFrames>
+								</Storyboard>
+							</Grid.Resources>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualStateGroup.Transitions>
+										<VisualTransition GeneratedDuration="0"/>
+										<VisualTransition From="Normal" GeneratedDuration="0" To="MouseOver">
+											<Storyboard>
+												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+													<EasingColorKeyFrame KeyTime="0" Value="#FF44851A"/>
+													<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF305618"/>
+													<EasingColorKeyFrame KeyTime="0:0:4" Value="#FF305618"/>
+												</ColorAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualTransition>
+										<VisualTransition From="MouseOver" GeneratedDuration="0" To="Normal">
+											<Storyboard>
+												<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+													<EasingColorKeyFrame KeyTime="0" Value="#FF305618"/>
+													<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF44851A"/>
+												</ColorAnimationUsingKeyFrames>
+											</Storyboard>
+										</VisualTransition>
+									</VisualStateGroup.Transitions>
+									<VisualState x:Name="Disabled"/>
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Unfocused"/>
+									<VisualState x:Name="Focused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<VisualStateManager.CustomVisualStateManager>
+								<ei:ExtendedVisualStateManager/>
+							</VisualStateManager.CustomVisualStateManager>
+							<Rectangle x:Name="rectangle" Fill="#FF44851A" RadiusY="0.333" RadiusX="0.333"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" OpacityMask="Black"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="GridStyle1" TargetType="Grid"/>
+		<Storyboard x:Name="Fondo" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen1">
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen2">
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen3">
+				<EasingDoubleKeyFrame KeyTime="0:0:8" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:9" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagne4">
+				<EasingDoubleKeyFrame KeyTime="0:0:11" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:12" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen5">
+				<EasingDoubleKeyFrame KeyTime="0:0:14" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:15" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen6">
+				<EasingDoubleKeyFrame KeyTime="0:0:17" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:18" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen7">
+				<EasingDoubleKeyFrame KeyTime="0:0:20" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:21" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen8">
+				<EasingDoubleKeyFrame KeyTime="0:0:23" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:24" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen9">
+				<EasingDoubleKeyFrame KeyTime="0:0:26" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:27" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White" Margin="-7,-4,-138,4" Width="1024" Height="650">
+		<VisualStateManager.CustomVisualStateManager>
+			<ei:ExtendedVisualStateManager/>
+		</VisualStateManager.CustomVisualStateManager>
+		<Grid Style="{StaticResource GridStyle1}">
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Loaded">
+					<ei:GoToStateAction/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+			<Image x:Name="Imagen1_Copy" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
+			<Image x:Name="Imagen9" Margin="-1,-42,-2,-32" Source="/Fotos/Capturaa.PNG" Stretch="Fill"/>
+			<Image x:Name="Imagen8" Margin="-1,0,0,-35" Source="/Fotos/Captura4.PNG" Stretch="Fill"/>
+			<Image x:Name="Imagen7" Margin="-1,0,-2,0" Source="/Fotos/Captura3.PNG" Stretch="Fill"/>
+			<Image x:Name="Imagen6" Margin="-2,-17,0,-17" Source="/Fotos/Captura.PNG" Stretch="Fill"/>
+			<Image x:Name="Imagen5" Margin="1,-33,-1,0" Source="/Fotos/5884372469_dc75a9234b_b.jpg" Stretch="Fill"/>
+			<Image x:Name="Imagne4" Margin="0,-71,0,-47" Source="/Fotos/5601562211_b551a98b6f_b.jpg" Stretch="Fill"/>
+			<Image x:Name="Imagen3" Margin="1,-120,-1,2" Source="/Fotos/4113816672_d17bc1f9c3_b.jpg" Stretch="Fill"/>
+			<Image x:Name="Imagen2" Source="/Fotos/4055392048_9cf1ee21f2_b.jpg" Stretch="Fill" Margin="2,-34,-2,-2"/>
+			<Image x:Name="Imagen1" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
+		</Grid>
+		<Image Margin="-6,13,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top"/>
+		<Button Content="Inicio" HorizontalAlignment="Left" Height="34" VerticalAlignment="Bottom" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" />
+		<Button Content="Mapa" HorizontalAlignment="Left" Height="34" VerticalAlignment="Bottom" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="176,0,0,0" />
+		<Button Content="Registro" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
+		<Button Content="Reservaciones" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
+		<Button Content="Galería" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
+		<Button Content="Contactenos" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" HorizontalAlignment="Right" Width="118" />
+	</Grid>
+</UserControl>
