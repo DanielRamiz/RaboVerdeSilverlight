@@ -26,7 +26,9 @@ namespace RaboVerdeSilverlight
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Contactos.xaml", UriKind.Relative));
+           // NavigationService.
+            //NavigationService.Navigate(new Uri("lugares.xaml", UriKind.Relative));
+            
         }
 
         
