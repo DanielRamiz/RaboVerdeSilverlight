@@ -226,7 +226,7 @@
 		<VisualStateManager.CustomVisualStateManager>
 			<ei:ExtendedVisualStateManager/>
 		</VisualStateManager.CustomVisualStateManager>
-		<Grid Style="{StaticResource GridStyle1}">
+		<Grid x:Name="FondoPantalla" Style="{StaticResource GridStyle1}" d:IsHidden="True">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Loaded">
 					<ei:GoToStateAction/>
@@ -244,11 +244,13 @@
 			<Image x:Name="Imagen1" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
 		</Grid>
 		<Image Margin="-6,13,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top"/>
-		<Button Content="Inicio" HorizontalAlignment="Left" Height="34" VerticalAlignment="Bottom" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" />
-		<Button Content="Mapa" HorizontalAlignment="Left" Height="34" VerticalAlignment="Bottom" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="176,0,0,0" />
-		<Button Content="Registro" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
-		<Button Content="Reservaciones" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
-		<Button Content="Galería" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
-		<Button Content="Contactenos" Height="34" VerticalAlignment="Bottom" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" HorizontalAlignment="Right" Width="118" />
+		<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
+			<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" />
+			<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="176,0,0,0" />
+			<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
+			<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
+			<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
+			<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" HorizontalAlignment="Right" Width="118" />
+		</Grid>
 	</Grid>
 </UserControl>

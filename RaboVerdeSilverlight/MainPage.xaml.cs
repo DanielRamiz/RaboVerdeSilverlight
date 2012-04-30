@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Interop;
+using System.Windows.Navigation;
 
 namespace RaboVerdeSilverlight
 {
@@ -25,7 +26,7 @@ namespace RaboVerdeSilverlight
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            NavigationService.Navigate(new Uri("Contactos.xaml", UriKind.Relative));
         }
 
         
