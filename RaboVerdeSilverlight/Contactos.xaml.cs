@@ -23,6 +23,21 @@ namespace RaboVerdeSilverlight
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
             LogoAnimacion.Begin();
+			AnimaciónContenido.Begin();
+        }
+
+        private void BtnMapa_Click(object sender, RoutedEventArgs e)
+        {
+            Mapa Mapa = new Mapa();
+            LayoutRoot.Children.Clear();
+            LayoutRoot.Children.Add(Mapa);
+        }
+
+        private void BtnInicio_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage inicio = new MainPage();
+            LayoutRoot.Children.Clear();
+            LayoutRoot.Children.Add(inicio);
         }
 
         

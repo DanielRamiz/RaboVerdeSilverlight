@@ -7,50 +7,37 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using System.Windows.Interop;
-using System.Windows.Navigation;
 
 namespace RaboVerdeSilverlight
 {
-	public partial class MainPage : UserControl
+	public partial class Mapa : UserControl
 	{
-		public MainPage()
+		public Mapa()
 		{
 			// Required to initialize variables
 			InitializeComponent();
-
-            Fondo.Begin();
-			
-			
 		}
 
-      
+	
 
-    
+     
 
-        private void BtnMapa_Click(object sender, RoutedEventArgs e)
+        private void BtnInicio_Click(object sender, RoutedEventArgs e)
         {
-            
-            Mapa Mapa = new Mapa();
+            MainPage inicio = new MainPage();
             LayoutRoot.Children.Clear();
-            LayoutRoot.Children.Add(Mapa);
+            LayoutRoot.Children.Add(inicio);
         }
 
         private void BtnContacto_Click(object sender, RoutedEventArgs e)
         {
-            Contactos  COntacto = new Contactos ();
+            Contactos COntacto = new Contactos();
             LayoutRoot.Children.Clear();
             LayoutRoot.Children.Add(COntacto);
         }
 
     
 
-  
-
         
-
-		
-
-		
 	}
 }

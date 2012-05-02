@@ -7,7 +7,7 @@
            xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Name="Contactos1" x:Class="RaboVerdeSilverlight.Contactos"
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
-           Title="Contactos Page" Width="1034" Height="650">
+           Title="Contactos Page" Width="1024" Height="650">
 	<navigation:Page.Resources>
 		<Style x:Key="Buton1" TargetType="Button">
 			<Setter Property="Template">
@@ -93,15 +93,113 @@
 				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<Storyboard x:Name="AnimaciónContenido">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Contenido">
+				<EasingDoubleKeyFrame KeyTime="0" Value="740"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image1">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="104.923"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<DiscreteDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</navigation:Page.Resources>
     <Grid x:Name="LayoutRoot" Width="1024" Height="650" Background="White">
-    	<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom" d:IsLocked="True">
-    		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" />
-    		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="176,0,0,0" />
-    		<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
-    		<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
-    		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
-    		<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" Click="Button_Click" HorizontalAlignment="Right" Width="118" />
+    	<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
+    		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Name="BtnInicio" Click="BtnInicio_Click" />
+    		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="176,0,0,0" Name="BtnMapa" Click="BtnMapa_Click" />
+    		<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
+    		<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
+    		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
+    		<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" />
     	</Grid>
     	<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-6,13,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
     		<Rectangle x:Name="rectangle" Fill="#FF44851A" Margin="8,0,0,0" Opacity="0.455" RenderTransformOrigin="0.5,0.5">
@@ -113,6 +211,30 @@
     		<Image Source="Logo Rabo Verde.png" Stretch="Fill" Loaded="Image_Loaded" />
     		<TextBlock Margin="0,37,-593,4" TextWrapping="Wrap" Text="Contactenos" FontSize="64" FontFamily="Segoe UI Symbol" HorizontalAlignment="Right" Width="369" Foreground="White"/>
 
+    	</Grid>
+    	<Grid x:Name="Contenido" Margin="313,143,0,98" RenderTransformOrigin="0.5,0.5">
+    		<Grid.RenderTransform>
+    			<CompositeTransform/>
+    		</Grid.RenderTransform>
+    		<Rectangle Fill="#84F4F4F5"/>
+    		<TextBlock x:Name="textBlock" Margin="8,23,0,0" TextWrapping="Wrap" FontFamily="Segoe WP SemiLight" FontSize="48" HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="184" RenderTransformOrigin="0.5,0.5">
+    			<TextBlock.RenderTransform>
+    				<CompositeTransform/>
+    			</TextBlock.RenderTransform><Run Text="Teléfono: "/><LineBreak/><Run Text="              "/></TextBlock>
+    		<TextBlock x:Name="textBlock1" Margin="93,110,0,177" TextWrapping="Wrap" Foreground="#FF818181" HorizontalAlignment="Left" Width="160" RenderTransformOrigin="0.5,0.5">
+    			<TextBlock.RenderTransform>
+    				<CompositeTransform/>
+    			</TextBlock.RenderTransform><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="88894110"/><LineBreak FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight"/><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="              70307087"/></TextBlock>
+    		<Image x:Name="image" Margin="52,114,0,0" Source="Costa-Rica.png" Stretch="Fill" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="37" RenderTransformOrigin="0.5,0.5">
+    			<Image.RenderTransform>
+    				<CompositeTransform/>
+    			</Image.RenderTransform>
+    		</Image>
+    		<Image x:Name="image1" Margin="52,191,0,181" Source="Costa-Rica.png" Stretch="Fill" HorizontalAlignment="Left" Width="37" RenderTransformOrigin="0.5,0.5">
+    			<Image.RenderTransform>
+    				<CompositeTransform/>
+    			</Image.RenderTransform>
+    		</Image>
     	</Grid>
 
     </Grid>
