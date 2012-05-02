@@ -1,4 +1,4 @@
-﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" mc:Ignorable="d"
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" x:Name="__" mc:Ignorable="d"
 	x:Class="RaboVerdeSilverlight.MainPage"
 	Width="1024" Height="650">
 	<UserControl.Resources>
@@ -222,7 +222,7 @@
 		</Storyboard>
 	</UserControl.Resources>
 
-	<Grid x:Name="LayoutRoot" Background="White" Margin="-1,-4,1,4" Width="1024" Height="650">
+	<Grid x:Name="LayoutRoot" Background="White" Width="1024" Height="650">
 		<VisualStateManager.CustomVisualStateManager>
 			<ei:ExtendedVisualStateManager/>
 		</VisualStateManager.CustomVisualStateManager>

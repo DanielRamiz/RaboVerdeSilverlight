@@ -94,6 +94,7 @@
 					<CompositeTransform/>
 				</Rectangle.RenderTransform>
 			</Rectangle>
+			<Image Source="Logo Rabo Verde.png" Stretch="Fill" />
 
 			
 
