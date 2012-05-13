@@ -85,6 +85,9 @@
     <Compile Include="Contactos.xaml.cs">
       <DependentUpon>Contactos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Habitaciones.xaml.cs">
+      <DependentUpon>Habitaciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
     <Page Include="Contactos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Habitaciones.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
