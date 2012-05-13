@@ -243,12 +243,12 @@
 			<Image x:Name="Imagen2" Source="/Fotos/4055392048_9cf1ee21f2_b.jpg" Stretch="Fill" Margin="2,-34,-2,-2"/>
 			<Image x:Name="Imagen1" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
 		</Grid>
-		<Image Margin="-6,13,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top"/>
+		<Image Margin="-6,-1,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top"/>
 		<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
 			<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Name="BtnInicio" />
 			<Button Content="Mapa" HorizontalAlignment="Right" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,730,0" Name="BtnMapa" Click="BtnMapa_Click" />
 			<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
-			<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
+			<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" Height="34" VerticalAlignment="Top" Name="BtnReservaciones" Click="BtnReservaciones_Click" />
 			<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
 			<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" Name="BtnContacto" Click="BtnContacto_Click" />
 		</Grid>

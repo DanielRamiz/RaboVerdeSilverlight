@@ -79,8 +79,10 @@
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot">
-		<mapa:Map CredentialsProvider="AlVF9j1LbTT74Fbs8n2-SeCV6FalQI7CoeBFShN37DsrHbj1lRtDbywbcZUGquXV" Center="10.403061,-85.803356" ZoomLevel="10"/>
-		<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
+		<mapa:Map CredentialsProvider="AlVF9j1LbTT74Fbs8n2-SeCV6FalQI7CoeBFShN37DsrHbj1lRtDbywbcZUGquXV" Center="9.6225700378418,-84.6371536254883" ZoomLevel="17" NavigationVisibility="Collapsed" >
+			<mapa:Pushpin Location="9.6225700378418,-84.6371536254883" />
+		</mapa:Map>
+			<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
 			<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Name="BtnInicio" Click="BtnInicio_Click" />
 			<Button Content="Mapa" HorizontalAlignment="Right" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,730,0" Name="BtnMapa" />
 			<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
@@ -88,7 +90,7 @@
 			<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
 			<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" Name="BtnContacto" Click="BtnContacto_Click" />
 		</Grid>
-		<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-6,13,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
+		<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-8,0,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
 			<Rectangle x:Name="rectangle" Fill="#FF44851A" Margin="8,0,0,0" Opacity="0.455" RenderTransformOrigin="0.5,0.5">
 				<Rectangle.RenderTransform>
 					<CompositeTransform/>

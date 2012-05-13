@@ -201,7 +201,7 @@
     		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
     		<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" />
     	</Grid>
-    	<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-6,13,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
+    	<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-8,0,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
     		<Rectangle x:Name="rectangle" Fill="#FF44851A" Margin="8,0,0,0" Opacity="0.455" RenderTransformOrigin="0.5,0.5">
     			<Rectangle.RenderTransform>
     				<CompositeTransform/>

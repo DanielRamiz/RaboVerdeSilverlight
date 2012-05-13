@@ -43,6 +43,15 @@ namespace RaboVerdeSilverlight
             LayoutRoot.Children.Add(COntacto);
         }
 
+       
+
+        private void BtnReservaciones_Click(object sender, RoutedEventArgs e)
+        {
+            Habitaciones habitacion = new Habitaciones();
+            LayoutRoot.Children.Clear();
+            LayoutRoot.Children.Add(habitacion);
+        }
+
     
 
   
