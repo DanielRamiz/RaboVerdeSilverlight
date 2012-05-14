@@ -195,30 +195,6 @@
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen7">
-				<EasingDoubleKeyFrame KeyTime="0:0:20" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:21" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<CircleEase EasingMode="EaseOut"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen8">
-				<EasingDoubleKeyFrame KeyTime="0:0:23" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:24" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<CircleEase EasingMode="EaseOut"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Imagen9">
-				<EasingDoubleKeyFrame KeyTime="0:0:26" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:27" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<CircleEase EasingMode="EaseOut"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="Intro">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="BtnInicio">
@@ -306,16 +282,13 @@
 		<VisualStateManager.CustomVisualStateManager>
 			<ei:ExtendedVisualStateManager/>
 		</VisualStateManager.CustomVisualStateManager>
-		<Grid x:Name="FondoPantalla" Style="{StaticResource GridStyle1}" d:IsLocked="True">
+		<Grid x:Name="FondoPantalla" Style="{StaticResource GridStyle1}">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Loaded">
 					<ei:GoToStateAction/>
 				</i:EventTrigger>
 			</i:Interaction.Triggers>
 			<Image x:Name="Imagen1_Copy" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
-			<Image x:Name="Imagen9" Margin="-1,-42,-2,-32" Source="/Fotos/Capturaa.PNG" Stretch="Fill"/>
-			<Image x:Name="Imagen8" Margin="-1,0,0,-35" Source="/Fotos/Captura4.PNG" Stretch="Fill"/>
-			<Image x:Name="Imagen7" Margin="-1,0,-2,0" Source="/Fotos/Captura3.PNG" Stretch="Fill"/>
 			<Image x:Name="Imagen6" Margin="-2,-17,0,-17" Source="/Fotos/Captura.PNG" Stretch="Fill"/>
 			<Image x:Name="Imagen5" Margin="1,-33,-1,0" Source="/Fotos/5884372469_dc75a9234b_b.jpg" Stretch="Fill"/>
 			<Image x:Name="Imagne4" Margin="0,-71,0,-47" Source="/Fotos/5601562211_b551a98b6f_b.jpg" Stretch="Fill"/>
