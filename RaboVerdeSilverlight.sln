@@ -18,7 +18,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RaboVerdeSilverlightSite", 
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "3267"
+		VWDPort = "4981"
 		ProjOutputReferences = "{ec7476db-0b78-42cc-8cb8-7a0305cdb1d1}|ClientBin|false;"
 	EndProjectSection
 EndProject
