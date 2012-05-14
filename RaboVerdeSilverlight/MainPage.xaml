@@ -220,13 +220,93 @@
 				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<Storyboard x:Name="Intro">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="BtnInicio">
+				<EasingDoubleKeyFrame KeyTime="0" Value="36.003"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="34.802"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="BtnMapa">
+				<SplineDoubleKeyFrame KeyTime="0" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="button">
+				<SplineDoubleKeyFrame KeyTime="0" Value="36.667"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:1.8" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="BtnReservaciones">
+				<SplineDoubleKeyFrame KeyTime="0" Value="36.667"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:2.3" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="button1">
+				<SplineDoubleKeyFrame KeyTime="0" Value="36.667"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:2.8" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="BtnContacto">
+				<SplineDoubleKeyFrame KeyTime="0" Value="36.667"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:3.3" Value="36.667"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="4"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="image">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-90"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-43"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</UserControl.Resources>
 
 	<Grid x:Name="LayoutRoot" Background="White" Width="1024" Height="650">
 		<VisualStateManager.CustomVisualStateManager>
 			<ei:ExtendedVisualStateManager/>
 		</VisualStateManager.CustomVisualStateManager>
-		<Grid x:Name="FondoPantalla" Style="{StaticResource GridStyle1}" d:IsHidden="True">
+		<Grid x:Name="FondoPantalla" Style="{StaticResource GridStyle1}" d:IsLocked="True">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Loaded">
 					<ei:GoToStateAction/>
@@ -243,14 +323,50 @@
 			<Image x:Name="Imagen2" Source="/Fotos/4055392048_9cf1ee21f2_b.jpg" Stretch="Fill" Margin="2,-34,-2,-2"/>
 			<Image x:Name="Imagen1" Margin="1,0,-449,-8" Source="/Fotos/2577750104_60f75e6a88_o.jpg" Stretch="Fill"/>
 		</Grid>
-		<Image Margin="-6,-1,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top"/>
+		<Image x:Name="image" Margin="-6,-1,0,0" Source="Logo Rabo Verde.png" Stretch="Fill" HorizontalAlignment="Left" Width="432" Height="110" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<Image.Projection>
+				<PlaneProjection/>
+			</Image.Projection>
+			<Image.RenderTransform>
+				<CompositeTransform/>
+			</Image.RenderTransform>
+			<i:Interaction.Triggers>
+				<i:EventTrigger>
+					<ei:ControlStoryboardAction x:Name="Intro1" Storyboard="{StaticResource Intro}"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Image>
 		<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
-			<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Name="BtnInicio" />
-			<Button Content="Mapa" HorizontalAlignment="Right" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,730,0" Name="BtnMapa" Click="BtnMapa_Click" />
-			<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
-			<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" Height="34" VerticalAlignment="Top" Name="BtnReservaciones" Click="BtnReservaciones_Click" />
-			<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
-			<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" Name="BtnContacto" Click="BtnContacto_Click" />
+			<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" x:Name="BtnInicio" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
+			<Button Content="Mapa" HorizontalAlignment="Right" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,730,0" x:Name="BtnMapa" Click="BtnMapa_Click" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="button" Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
+			<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" Height="34" VerticalAlignment="Top" x:Name="BtnReservaciones" Click="BtnReservaciones_Click" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="button1" Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
+			<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" x:Name="BtnContacto" Click="BtnContacto_Click" RenderTransformOrigin="0.5,0.5" >
+				<Button.RenderTransform>
+					<CompositeTransform/>
+				</Button.RenderTransform>
+			</Button>
 		</Grid>
 	</Grid>
 </UserControl>
