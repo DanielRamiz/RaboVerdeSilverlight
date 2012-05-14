@@ -20,11 +20,6 @@ namespace RaboVerdeSilverlight
             InitializeComponent();
         }
 
-        private void Image_Loaded(object sender, RoutedEventArgs e)
-        {
-            LogoAnimacion.Begin();
-			AnimaciónContenido.Begin();
-        }
 
         private void BtnMapa_Click(object sender, RoutedEventArgs e)
         {
@@ -39,6 +34,8 @@ namespace RaboVerdeSilverlight
             LayoutRoot.Children.Clear();
             LayoutRoot.Children.Add(inicio);
         }
+
+        
 
         
 

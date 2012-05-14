@@ -75,122 +75,73 @@
 			</Setter>
 		</Style>
 		<Style x:Key="Logo" TargetType="Grid"/>
-		<Storyboard x:Name="LogoAnimacion">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
-				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="2.408">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BounceEase EasingMode="EaseOut" Bounces="2" Bounciness="3"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
+		<Storyboard x:Name="INtro">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Phone">
+				<SplineDoubleKeyFrame KeyTime="0" Value="-508.5"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Mail">
+				<SplineDoubleKeyFrame KeyTime="0" Value="510"/>
+				<SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Phone">
+				<EasingColorKeyFrame KeyTime="0" Value="#FF3C7AAF"/>
+				<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF3C7AAF"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Mail">
+				<EasingColorKeyFrame KeyTime="0" Value="#FF3C7AAF"/>
+				<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF3C7AAF"/>
+			</ColorAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Phone">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Mail">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Phone">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="298.5">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BounceEase EasingMode="EaseOut" Bounces="2" Bounciness="3"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
-		</Storyboard>
-		<Storyboard x:Name="AnimaciónContenido">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Contenido">
-				<EasingDoubleKeyFrame KeyTime="0" Value="740"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<CircleEase EasingMode="EaseOut"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
-			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
-				<DiscreteObjectKeyFrame KeyTime="0">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Collapsed</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-			</ObjectAnimationUsingKeyFrames>
-			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
-				<DiscreteObjectKeyFrame KeyTime="0">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Collapsed</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-			</ObjectAnimationUsingKeyFrames>
-			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
-				<DiscreteObjectKeyFrame KeyTime="0">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Collapsed</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-			</ObjectAnimationUsingKeyFrames>
-			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image1">
-				<DiscreteObjectKeyFrame KeyTime="0">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Collapsed</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1">
-					<DiscreteObjectKeyFrame.Value>
-						<Visibility>Visible</Visibility>
-					</DiscreteObjectKeyFrame.Value>
-				</DiscreteObjectKeyFrame>
-			</ObjectAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Mail">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="104.923"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="Phone">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-180"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="textBlock1">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<DiscreteDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="Mail">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-180"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" Storyboard.TargetName="Mail">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-90"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="104.923"/>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" Storyboard.TargetName="Phone">
+				<EasingDoubleKeyFrame KeyTime="0" Value="90"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<Storyboard x:Name="AnimaciónContenido"/>
 		<Style x:Key="SubMenuCeleste" TargetType="Button">
 			<Setter Property="Template">
 				<Setter.Value>
@@ -559,9 +510,143 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Storyboard x:Name="ContenidoTelefono">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Contenido">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto3">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Fondo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.576"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.576"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="Cerrrar">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="Button"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value=""/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value=""/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Cerrrar">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Style x:Key="Cerrar" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<Image x:Name="Cerrar" Source="Cancel.png" Stretch="Fill"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Storyboard x:Name="ContenidoTelefonoCerrar">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Contenido">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Cerrrar">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Texto3">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.471"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0.471"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.471"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0.471"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Contenido_Telefonos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Fondo">
+				<EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</navigation:Page.Resources>
-    <Grid x:Name="LayoutRoot" Width="1024" Height="650" Background="White">
-    	<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
+	<i:Interaction.Triggers>
+		<i:EventTrigger>
+			<ei:ControlStoryboardAction x:Name="Intro" Storyboard="{StaticResource INtro}"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+    <Grid x:Name="LayoutRoot" Width="1024" Height="650" Background="#FFDFE0D6">
+    	<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom" d:IsLocked="True">
     		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" x:Name="BtnInicio" Click="BtnInicio_Click" />
     		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="176,0,0,0" x:Name="BtnMapa" Click="BtnMapa_Click" />
     		<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
@@ -569,49 +654,109 @@
     		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
     		<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" />
     	</Grid>
-    	<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-8,0,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}">
+    	<Grid x:Name="Logo" HorizontalAlignment="Left" Height="110" Margin="-8,0,0,0" VerticalAlignment="Top" Width="432" Style="{StaticResource Logo}" d:IsLocked="True">
     		<Rectangle x:Name="rectangle" Fill="#FF44851A" Margin="8,0,0,0" Opacity="0.455" RenderTransformOrigin="0.5,0.5">
     			<Rectangle.RenderTransform>
     				<CompositeTransform/>
     			</Rectangle.RenderTransform>
     		</Rectangle>
 
-    		<Image Source="Logo Rabo Verde.png" Stretch="Fill" Loaded="Image_Loaded" />
-    		<TextBlock Margin="0,37,-593,4" TextWrapping="Wrap" Text="Contactenos" FontSize="64" FontFamily="Segoe UI Symbol" HorizontalAlignment="Right" Width="369" Foreground="White"/>
+    		<Image Source="Logo Rabo Verde.png" Stretch="Fill" />
 
     	</Grid>
-    	<Grid x:Name="Contenido" Margin="313,143,0,98" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
-    		<Grid.RenderTransform>
-    			<CompositeTransform/>
-    		</Grid.RenderTransform>
-    		<Rectangle Fill="#84F4F4F5"/>
-    		<TextBlock x:Name="textBlock" Margin="8,23,0,0" TextWrapping="Wrap" FontFamily="Segoe WP SemiLight" FontSize="48" HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="184" RenderTransformOrigin="0.5,0.5"><TextBlock.RenderTransform>
+    	<Grid x:Name="SubMenu" Margin="356,266,356,267">
+    		<Button x:Name="Phone" Content="Junior" Style="{StaticResource SubMenuPhone}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Left" Width="117">
+    			<i:Interaction.Triggers>
+    				<i:EventTrigger EventName="Click">
+    					<ei:ControlStoryboardAction x:Name="Click" Storyboard="{StaticResource ContenidoTelefono}"/>
+    				</i:EventTrigger>
+    			</i:Interaction.Triggers>
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    			<Button.RenderTransform>
     				<CompositeTransform/>
-    			</TextBlock.RenderTransform><Run Text="Teléfono: "/><LineBreak/><Run Text="              "/></TextBlock>
-    		<TextBlock x:Name="textBlock1" Margin="93,110,0,177" TextWrapping="Wrap" Foreground="#FF818181" HorizontalAlignment="Left" Width="160" RenderTransformOrigin="0.5,0.5"><TextBlock.RenderTransform>
+    			</Button.RenderTransform>
+    		</Button>
+    		<Button x:Name="Mail" Content="Junior" Style="{StaticResource SubmenuMail}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Right" Width="117">
+    			<i:Interaction.Triggers>
+    				<i:EventTrigger EventName="Click">
+    					<ei:ControlStoryboardAction x:Name="Click1" Storyboard="{StaticResource ContenidoTelefono}"/>
+    				</i:EventTrigger>
+    			</i:Interaction.Triggers>
+    			<Button.Projection>
+    				<PlaneProjection/>
+    			</Button.Projection>
+    			<Button.RenderTransform>
     				<CompositeTransform/>
-    			</TextBlock.RenderTransform><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="88894110"/><LineBreak FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight"/><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="              70307087"/></TextBlock>
-    		<Image x:Name="image" Margin="52,114,0,0" Source="Costa-Rica.png" Stretch="Fill" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="37" RenderTransformOrigin="0.5,0.5">
-    			<Image.RenderTransform>
-    				<CompositeTransform/>
-    			</Image.RenderTransform>
-    		</Image>
-    		<Image x:Name="image1" Margin="52,191,0,181" Source="Costa-Rica.png" Stretch="Fill" HorizontalAlignment="Left" Width="37" RenderTransformOrigin="0.5,0.5">
-    			<Image.RenderTransform>
-    				<CompositeTransform/>
-    			</Image.RenderTransform>
-    		</Image>
+    			</Button.RenderTransform>
+    		</Button>
+
     	</Grid>
-    	<Button x:Name="Phone" Content="Junior" Style="{StaticResource SubMenuPhone}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" Margin="327,282,0,251" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Left" Width="117">
-    		<Button.RenderTransform>
-    			<CompositeTransform/>
-    		</Button.RenderTransform>
-    	</Button>
-    	<Button x:Name="Mail" Content="Junior" Style="{StaticResource SubmenuMail}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" Margin="0,282,385,251" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Right" Width="117">
-    		<Button.RenderTransform>
-    			<CompositeTransform/>
-    		</Button.RenderTransform>
-    	</Button>
+    	<Grid x:Name="Contenido" Margin="88,126,87,99" Visibility="Collapsed">
+    		<Rectangle x:Name="Fondo" Fill="#70000000" Margin="-88,-127,-88,-99"/>
+
+    		<Rectangle x:Name="Contenido_Telefonos" Fill="#FF9E536A" RenderTransformOrigin="0.5,0.5">
+    			<Rectangle.RenderTransform>
+    				<CompositeTransform/>
+    			</Rectangle.RenderTransform>
+    		</Rectangle>
+    		<Button x:Name="Cerrrar" Content="Button" HorizontalAlignment="Right" Height="48" Style="{StaticResource Cerrar}" VerticalAlignment="Top" Width="48">
+    			<i:Interaction.Triggers>
+    				<i:EventTrigger EventName="Click">
+    					<ei:ControlStoryboardAction x:Name="Cerrar" Storyboard="{StaticResource ContenidoTelefonoCerrar}"/>
+    				</i:EventTrigger>
+    			</i:Interaction.Triggers>
+    		</Button>
+    		<TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" Text="Teléfonos" VerticalAlignment="Top" Width="284" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="64"/>
+    		<Grid x:Name="Texto" Height="49" Margin="138,116,331,0" VerticalAlignment="Top">
+    			<Image HorizontalAlignment="Left" Source="Costa-Rica.png" Stretch="Fill" Width="49"/>
+    			<TextBlock Margin="62,12,0,13" TextWrapping="Wrap" Text="Reservaciones        224776900" Foreground="White" FontSize="18.667"/>
+
+    		</Grid>
+    		<Grid x:Name="Texto2" Margin="138,176,303,200">
+    			<Image HorizontalAlignment="Left" Source="Costa-Rica.png" Stretch="Fill" Width="49"/>
+    			<TextBlock Margin="62,12,0,13" TextWrapping="Wrap" Text="Recursos Humanos 225576944" Foreground="White" FontSize="18.667"/>
+
+    		</Grid>
+    		<Grid x:Name="Texto3" Margin="138,0,303,140" Height="49" VerticalAlignment="Bottom">
+    			<Image HorizontalAlignment="Left" Source="Costa-Rica.png" Stretch="Fill" Width="49"/>
+    			<TextBlock Margin="62,12,0,13" TextWrapping="Wrap" Text="Servicio                 225545544" Foreground="White" FontSize="18.667"/>
+
+    		</Grid>
+
+    	</Grid>
+    	<Grid x:Name="ContenidoMail" Margin="88,126,87,99">
+    		<Rectangle x:Name="Fondo1" Fill="#70000000" Margin="-88,-127,-88,-99"/>
+
+    		<Rectangle x:Name="Contenido_Telefonos1" Fill="#FF808D8A" RenderTransformOrigin="0.5,0.5" Margin="0,-1,0,1">
+    			<Rectangle.RenderTransform>
+    				<CompositeTransform/>
+    			</Rectangle.RenderTransform>
+    		</Rectangle>
+    		<Button x:Name="Cerrrar1" Content="" HorizontalAlignment="Right" Height="48" Style="{StaticResource Cerrar}" VerticalAlignment="Top" Width="48">
+    			<i:Interaction.Triggers>
+    				<i:EventTrigger EventName="Click">
+    					<ei:ControlStoryboardAction x:Name="Cerrar1" Storyboard="{StaticResource ContenidoTelefonoCerrar}"/>
+    				</i:EventTrigger>
+    			</i:Interaction.Triggers>
+    		</Button>
+    		<TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" Text="Mail" VerticalAlignment="Top" Width="284" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="64"/>
+    		<Grid x:Name="Formulario" Margin="74,160,27,120">
+    			<TextBlock x:Name="LblNombre" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top" Width="77" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="18.667"/>
+    			<TextBox x:Name="txtNombre" Margin="81,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="277"/>
+    			<TextBlock x:Name="lblEmail" HorizontalAlignment="Left" Margin="0,40,0,0" TextWrapping="Wrap" Text="Email:" Width="77" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="18.667" Height="25" VerticalAlignment="Top"/>
+    			<TextBox x:Name="txtEmail" Margin="81,41,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="277"/>
+    			<TextBlock x:Name="lblPhone" HorizontalAlignment="Left" Margin="0,0,0,40" TextWrapping="Wrap" Text="Teléfono:" Width="77" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="18.667" Height="25" VerticalAlignment="Bottom"/>
+    			<TextBox x:Name="txtPhone" Margin="81,0,0,40" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="277"/>
+    			<TextBlock x:Name="lblPais" HorizontalAlignment="Left" TextWrapping="Wrap" Text="País:" Width="77" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="18.667" Height="25" VerticalAlignment="Bottom"/>
+    			<TextBox x:Name="txtPais" Margin="81,0,0,0" TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="277"/>
+    			<TextBlock x:Name="lblMensaje" Margin="0,0,281,0" TextWrapping="Wrap" Text="Mensaje:" Foreground="White" FontFamily="Segoe WP SemiLight" FontSize="18.667" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="77"/>
+    			<TextBox x:Name="txtMensaje" Margin="0,1,0,0" TextWrapping="Wrap" HorizontalAlignment="Right" Width="277"/>
+
+    		</Grid>
+
+    	</Grid>
 
     </Grid>
 </navigation:Page>
