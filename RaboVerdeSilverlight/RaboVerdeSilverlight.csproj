@@ -152,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Costa-Rica.png" />
+    <Resource Include="Iconos\Mail.png" />
+    <Resource Include="Iconos\Phone.png" />
     <Resource Include="Logo Rabo Verde.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />

@@ -4,7 +4,7 @@
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Name="Contactos1" x:Class="RaboVerdeSilverlight.Contactos"
+           xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" x:Name="Contactos1" x:Class="RaboVerdeSilverlight.Contactos"
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
            Title="Contactos Page" Width="1024" Height="650">
@@ -191,11 +191,379 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<Style x:Key="SubMenuCeleste" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+							<Grid.Resources>
+								<Storyboard x:Name="EnFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="contentPresenter">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="contentPresenter">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="contentPresenter">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.073">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.073"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="0.073"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="9"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="contentPresenter">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+								<Storyboard x:Name="SinFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="contentPresenter">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="contentPresenter">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="contentPresenter">
+										<SplineDoubleKeyFrame KeyTime="0" Value="0.073"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="contentPresenter">
+										<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+							</Grid.Resources>
+							<i:Interaction.Triggers>
+								<i:EventTrigger EventName="MouseEnter">
+									<ei:ControlStoryboardAction x:Name="AccionEntrar" Storyboard="{StaticResource EnFoco}"/>
+								</i:EventTrigger>
+								<i:EventTrigger EventName="MouseLeave">
+									<ei:ControlStoryboardAction x:Name="AccionSalir" Storyboard="{StaticResource SinFoco}"/>
+								</i:EventTrigger>
+							</i:Interaction.Triggers>
+							<Grid.RenderTransform>
+								<CompositeTransform/>
+							</Grid.RenderTransform>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="FocusStates"/>
+								<VisualStateGroup x:Name="CommonStates"/>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle" Fill="#FFBB5442" RenderTransformOrigin="0.5,0.5">
+								<Rectangle.Effect>
+									<BlurEffect Radius="0"/>
+								</Rectangle.Effect>
+								<Rectangle.RenderTransform>
+									<CompositeTransform Rotation="45"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RenderTransformOrigin="0.5,0.5">
+								<ContentPresenter.RenderTransform>
+									<CompositeTransform/>
+								</ContentPresenter.RenderTransform>
+								<ContentPresenter.Effect>
+									<BlurEffect Radius="0"/>
+								</ContentPresenter.Effect>
+							</ContentPresenter>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="SubMenuPhone" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+							<Grid.Resources>
+								<Storyboard x:Name="EnFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="9"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="image">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+								<Storyboard x:Name="SinFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="image">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+							</Grid.Resources>
+							<i:Interaction.Triggers>
+								<i:EventTrigger EventName="MouseEnter">
+									<ei:ControlStoryboardAction x:Name="AccionEntrar" Storyboard="{StaticResource EnFoco}"/>
+								</i:EventTrigger>
+								<i:EventTrigger EventName="MouseLeave">
+									<ei:ControlStoryboardAction x:Name="AccionSalir" Storyboard="{StaticResource SinFoco}"/>
+								</i:EventTrigger>
+							</i:Interaction.Triggers>
+							<Grid.RenderTransform>
+								<CompositeTransform/>
+							</Grid.RenderTransform>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="FocusStates"/>
+								<VisualStateGroup x:Name="CommonStates"/>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle" Fill="#FF9E536A" RenderTransformOrigin="0.5,0.5">
+								<Rectangle.Effect>
+									<BlurEffect Radius="0"/>
+								</Rectangle.Effect>
+								<Rectangle.RenderTransform>
+									<CompositeTransform Rotation="45"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Image x:Name="image" Margin="-17,-16,-18,-19" Source="Iconos/Phone.png" Stretch="Fill">
+								<Image.Effect>
+									<BlurEffect Radius="0"/>
+								</Image.Effect>
+							</Image>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="SubmenuMail" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+							<Grid.Resources>
+								<Storyboard x:Name="EnFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.145">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.145"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Springiness="3" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+										<EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="9"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="Mail">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+								<Storyboard x:Name="SinFoco">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="1.145"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+											<EasingDoubleKeyFrame.EasingFunction>
+												<ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+											</EasingDoubleKeyFrame.EasingFunction>
+										</EasingDoubleKeyFrame>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="rectangle">
+										<SplineDoubleKeyFrame KeyTime="0" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="Mail">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+							</Grid.Resources>
+							<i:Interaction.Triggers>
+								<i:EventTrigger EventName="MouseEnter">
+									<ei:ControlStoryboardAction x:Name="AccionEntrar" Storyboard="{StaticResource EnFoco}"/>
+								</i:EventTrigger>
+								<i:EventTrigger EventName="MouseLeave">
+									<ei:ControlStoryboardAction x:Name="AccionSalir" Storyboard="{StaticResource SinFoco}"/>
+								</i:EventTrigger>
+							</i:Interaction.Triggers>
+							<Grid.RenderTransform>
+								<CompositeTransform/>
+							</Grid.RenderTransform>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="FocusStates"/>
+								<VisualStateGroup x:Name="CommonStates"/>
+							</VisualStateManager.VisualStateGroups>
+							<Rectangle x:Name="rectangle" Fill="#FF808D8A" RenderTransformOrigin="0.5,0.5">
+								<Rectangle.Effect>
+									<BlurEffect Radius="0"/>
+								</Rectangle.Effect>
+								<Rectangle.RenderTransform>
+									<CompositeTransform Rotation="45"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Image x:Name="Mail" Margin="-24,-21,-20,-23" Source="Iconos/Mail.png" Stretch="Fill">
+								<Image.Effect>
+									<BlurEffect Radius="0"/>
+								</Image.Effect>
+							</Image>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
 	</navigation:Page.Resources>
     <Grid x:Name="LayoutRoot" Width="1024" Height="650" Background="White">
     	<Grid x:Name="Menu" Height="34" VerticalAlignment="Bottom">
-    		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Name="BtnInicio" Click="BtnInicio_Click" />
-    		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="176,0,0,0" Name="BtnMapa" Click="BtnMapa_Click" />
+    		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" x:Name="BtnInicio" Click="BtnInicio_Click" />
+    		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="176,0,0,0" x:Name="BtnMapa" Click="BtnMapa_Click" />
     		<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
     		<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
     		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
@@ -212,17 +580,15 @@
     		<TextBlock Margin="0,37,-593,4" TextWrapping="Wrap" Text="Contactenos" FontSize="64" FontFamily="Segoe UI Symbol" HorizontalAlignment="Right" Width="369" Foreground="White"/>
 
     	</Grid>
-    	<Grid x:Name="Contenido" Margin="313,143,0,98" RenderTransformOrigin="0.5,0.5">
+    	<Grid x:Name="Contenido" Margin="313,143,0,98" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
     		<Grid.RenderTransform>
     			<CompositeTransform/>
     		</Grid.RenderTransform>
     		<Rectangle Fill="#84F4F4F5"/>
-    		<TextBlock x:Name="textBlock" Margin="8,23,0,0" TextWrapping="Wrap" FontFamily="Segoe WP SemiLight" FontSize="48" HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="184" RenderTransformOrigin="0.5,0.5">
-    			<TextBlock.RenderTransform>
+    		<TextBlock x:Name="textBlock" Margin="8,23,0,0" TextWrapping="Wrap" FontFamily="Segoe WP SemiLight" FontSize="48" HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="184" RenderTransformOrigin="0.5,0.5"><TextBlock.RenderTransform>
     				<CompositeTransform/>
     			</TextBlock.RenderTransform><Run Text="Teléfono: "/><LineBreak/><Run Text="              "/></TextBlock>
-    		<TextBlock x:Name="textBlock1" Margin="93,110,0,177" TextWrapping="Wrap" Foreground="#FF818181" HorizontalAlignment="Left" Width="160" RenderTransformOrigin="0.5,0.5">
-    			<TextBlock.RenderTransform>
+    		<TextBlock x:Name="textBlock1" Margin="93,110,0,177" TextWrapping="Wrap" Foreground="#FF818181" HorizontalAlignment="Left" Width="160" RenderTransformOrigin="0.5,0.5"><TextBlock.RenderTransform>
     				<CompositeTransform/>
     			</TextBlock.RenderTransform><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="88894110"/><LineBreak FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight"/><Run FontSize="29.3330001831055" FontFamily="Segoe WP SemiLight" Text="              70307087"/></TextBlock>
     		<Image x:Name="image" Margin="52,114,0,0" Source="Costa-Rica.png" Stretch="Fill" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="37" RenderTransformOrigin="0.5,0.5">
@@ -236,6 +602,16 @@
     			</Image.RenderTransform>
     		</Image>
     	</Grid>
+    	<Button x:Name="Phone" Content="Junior" Style="{StaticResource SubMenuPhone}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" Margin="327,282,0,251" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Left" Width="117">
+    		<Button.RenderTransform>
+    			<CompositeTransform/>
+    		</Button.RenderTransform>
+    	</Button>
+    	<Button x:Name="Mail" Content="Junior" Style="{StaticResource SubmenuMail}" FontFamily="Segoe WP Semibold" FontSize="18.667" Foreground="White" Margin="0,282,385,251" RenderTransformOrigin="0.5,0.5" Background="#FF3C7AAF" HorizontalAlignment="Right" Width="117">
+    		<Button.RenderTransform>
+    			<CompositeTransform/>
+    		</Button.RenderTransform>
+    	</Button>
 
     </Grid>
 </navigation:Page>
