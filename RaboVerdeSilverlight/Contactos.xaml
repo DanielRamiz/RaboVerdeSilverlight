@@ -877,7 +877,7 @@
     		<Button Content="Inicio" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" x:Name="BtnInicio" Click="BtnInicio_Click" />
     		<Button Content="Mapa" HorizontalAlignment="Left" Width="118" Style="{StaticResource Buton1}" Foreground="White" Margin="176,0,0,0" x:Name="BtnMapa" Click="BtnMapa_Click" />
     		<Button Content="Registro" Style="{StaticResource Buton1}" Foreground="White" Margin="353,0,0,0" HorizontalAlignment="Left" Width="118" />
-    		<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" />
+    		<Button Content="Reservaciones" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,353,0" HorizontalAlignment="Right" Width="118" Name="btnReservaciones" Click="btnReservaciones_Click" />
     		<Button Content="Galería" Style="{StaticResource Buton1}" Foreground="White" Margin="0,0,176,0" HorizontalAlignment="Right" Width="118" />
     		<Button Content="Contactenos" Style="{StaticResource Buton1}" Foreground="White" HorizontalAlignment="Right" Width="118" />
     	</Grid>
