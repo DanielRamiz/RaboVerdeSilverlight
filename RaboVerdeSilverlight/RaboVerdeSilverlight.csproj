@@ -26,7 +26,7 @@
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
     <EnableOutOfBrowser>false</EnableOutOfBrowser>
-    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <UsePlatformExtensions>true</UsePlatformExtensions>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
     <LinkedServerProject>
     </LinkedServerProject>
@@ -123,9 +123,6 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fotos\2577750104_60f75e6a88_o.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Fotos\4055392048_9cf1ee21f2_b.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -138,15 +135,11 @@
     <Content Include="Fotos\5884372469_dc75a9234b_b.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Fotos\Captura.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Fotos\Captura3.PNG">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="2577750104_60f75e6a88_o.jpg" />
     <Resource Include="Cancel.png" />
+    <Resource Include="Captura.jpg" />
     <Resource Include="Costa-Rica.png" />
     <Resource Include="Iconos\Mail.png" />
     <Resource Include="Iconos\Phone.png" />

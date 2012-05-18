@@ -17,10 +17,7 @@ namespace RaboVerdeSilverlight
 			// Required to initialize variables
 			InitializeComponent();
 		}
-
-	
-
-     
+            
 
         private void BtnInicio_Click(object sender, RoutedEventArgs e)
         {
